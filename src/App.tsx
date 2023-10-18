@@ -21,12 +21,7 @@ function App() {
       const encodedLink = encodeURIComponent(link);
       // const response = await fetch(`http://localhost:8000/api/qr/${encodedLink}`);
       // const response = await fetch(`https://main--glittery-salamander-4076bc.netlify.app/api/qr/${encodedLink}`);
-      const response = await fetch(`https://main--glittery-salamander-4076bc.netlify.app/api/qr/${encodedLink}`, {
-        headers: {
-          'Access-Control-Allow-Origin': 'https://main--glittery-salamander-4076bc.netlify.app',
-          // 'Access-Control-Allow-Credentials': 'true',
-        }
-      })
+      const response = await fetch(`https://main--glittery-salamander-4076bc.netlify.app/api/qr/${encodedLink}`)
 
 
       const blob = await response.blob();
