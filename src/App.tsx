@@ -20,7 +20,7 @@ function App() {
     try {
       const encodedLink = encodeURIComponent(link);
       // const response = await fetch(`http://localhost:8000/api/qr/${encodedLink}`);
-      const response = await fetch(`https://dog-freckle-veterinarian.glitch.me/api/qr/${encodedLink}`);
+      const response = await fetch(`https://dog-freckle-veterinarian.glitch.me/api/qr/${encodedLink}`, { mode: 'no-cors' });
 
       const blob = await response.blob();
 
