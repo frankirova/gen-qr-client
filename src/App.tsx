@@ -11,7 +11,7 @@ function App() {
     setLink(e.target.value)
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     getQr();
   };
@@ -47,12 +47,12 @@ function App() {
           Carga el link que deseas convertir en qr, una vez generado descargalo y listo {';)'}
         </p>
       </section>
-      <form onSubmit={handleSubmit}>
+      <form >
         <label>Agrega tu link</label>
         <input onChange={handleChange} name='link' />
         {
           (qr != '') ? <button><a download='true' href={source}>Descargar QR</a></button>
-            : <button type='submit'>Obtener QR</button>
+            : <button onClick={handleSubmit}>Obtener QR</button>
         }
       </form>
     </div>
