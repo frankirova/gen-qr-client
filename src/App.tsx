@@ -21,7 +21,9 @@ function App() {
       const encodedLink = encodeURIComponent(link);
       // const response = await fetch(`http://localhost:8000/api/qr/${encodedLink}`);
       // const response = await fetch(`https://main--glittery-salamander-4076bc.netlify.app/api/qr/${encodedLink}`);
-      const response = await fetch(`https://glittery-salamander-4076bc.netlify.app/api/qr/${encodedLink}`)
+      // const response = await fetch(`https://glittery-salamander-4076bc.netlify.app/api/qr/${encodedLink}`)
+      const response = await fetch(`https://api-qrgen-py.onrender.com/api/qr/${encodedLink}`)
+
 
 
       const blob = await response.blob();
