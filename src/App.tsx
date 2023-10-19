@@ -36,7 +36,7 @@ function App() {
       console.error(error);
     }
   }
-  if (!qr) return <h1>Loading...</h1>
+
 
   return (
     <div className='container'>
